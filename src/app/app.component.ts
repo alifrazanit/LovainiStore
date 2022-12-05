@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { OnlineStatusService, OnlineStatusType } from 'ngx-online-status';
+import { HandleConnectionService } from '@services/handle-connection/handle-connection.service';
+import { OnlineStatusType } from 'ngx-online-status';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -7,26 +9,22 @@ import { OnlineStatusService, OnlineStatusType } from 'ngx-online-status';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  statusConnection:any = OnlineStatusType; 
+  statusConnection: any = OnlineStatusType;
   onlineStatusCheck: any = OnlineStatusType;
   statusConnectionStr: string = 'You are back online';
 
-  constructor(private onlineStatusService: OnlineStatusService) {
-    this.onlineStatusService.status.subscribe((status: OnlineStatusType) => {
-      this.statusConnection = status;
-      if(this.statusConnection == OnlineStatusType.ONLINE) {
-        this.statusConnectionStr = 'You are back online'
+  onlineSub!: Subscription;
+  constructor(
+    private handleConnection: HandleConnectionService) {
+    this.handleConnection.checkOnlineState();
+    this.onlineSub = this.handleConnection.IsOnline.subscribe(statusOnline => {
+      if (statusOnline) {
+        this.statusConnection = OnlineStatusType.ONLINE;
+        this.statusConnectionStr = 'You are back online';
       } else {
-        this.statusConnectionStr = 'You lose internet connection'
+        this.statusConnection = OnlineStatusType.OFFLINE;
+        this.statusConnectionStr = 'You lose internet connection';
       }
-    });
-  }
-
-  checkConnection(): boolean{
-    if(this.statusConnection == OnlineStatusType.ONLINE) {
-      return true;
-    } else {
-      return false;
-    }
+    })
   }
 }
