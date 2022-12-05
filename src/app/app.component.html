@@ -1,0 +1,5 @@
+<ngx-ui-loader></ngx-ui-loader>
+<div class="status" [class.offline]="statusConnection === onlineStatusCheck.OFFLINE">
+    {{ statusConnectionStr }}
+</div>
+<router-outlet></router-outlet>

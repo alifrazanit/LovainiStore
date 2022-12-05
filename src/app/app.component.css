@@ -1,0 +1,12 @@
+.status {
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+    transition: display 3s ease;
+    display: none;
+}
+
+.status.offline {
+    background-color: #EA2027;
+    display: block;
+}

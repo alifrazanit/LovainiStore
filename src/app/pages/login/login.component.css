@@ -1,0 +1,54 @@
+.image-box,
+.login-panel {
+  width: 50%;
+  height: auto;
+}
+.login-panel {
+  padding: 50px;
+}
+.image-box img {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.btn.btn-primary {
+  font-size: 14px;
+  width: 100%;
+  padding: 10px;
+}
+.flex-column {
+  flex-flow: row !important;
+}
+.font-small{
+  font-size: 12px  !important;
+}
+.form-check-input{
+  margin-right: 5px;
+}
+@media (max-width: 850px) {
+  .login-panel {
+    padding: 10px;
+  }
+}
+@media (max-width: 767px) {
+  .image-box,
+  .login-panel {
+    width: 100%;
+    height: auto;
+  }
+  .login-panel {
+    padding: 0 !important;
+  }
+  .title-page{
+    margin-top: 20px !important;
+  }
+  .image-box img {
+    height:50vh;
+    width: 100%;
+    object-fit: cover;
+  }
+  .flex-column {
+    flex-flow: column !important;
+  }
+}
