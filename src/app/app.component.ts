@@ -23,7 +23,7 @@ export class AppComponent {
         this.statusConnectionStr = 'You are back online';
       } else {
         this.statusConnection = OnlineStatusType.OFFLINE;
-        this.statusConnectionStr = 'You lose internet connection';
+        this.statusConnectionStr = 'You are lose internet connection';
       }
     })
   }

@@ -27,4 +27,10 @@ export const Label = {
     signIn:"Sign In",
     signUp:"Sign Up"
   },
+  message:{
+    failLogin1: "Incorrect username or password"
+  },
+  labels: {
+    titleModal: 'System Info'
+  }
 }

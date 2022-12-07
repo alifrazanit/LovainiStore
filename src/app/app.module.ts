@@ -13,6 +13,7 @@ import {
   PB_DIRECTION
 } from "ngx-ui-loader";
 import { ComponentsModule } from '@shared/components/components.module';
+import { ModalModule } from 'ngx-bootstrap/modal';
 
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
@@ -35,6 +36,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
     OnlineStatusModule,
     HttpClientModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
+    ModalModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

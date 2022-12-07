@@ -7,7 +7,7 @@ import { UnauthorizedComponent } from '@pages/unauthorized/unauthorized.componen
 import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { SignUpComponent } from '@pages/sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { ModalErrorComponent } from './modal-error/modal-error.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +16,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     NotFoundComponent,
     UnauthorizedComponent,
     DashboardComponent,
-    SignUpComponent
+    SignUpComponent,
+    ModalErrorComponent
   ],
   imports: [
     CommonModule,

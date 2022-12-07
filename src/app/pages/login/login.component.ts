@@ -4,6 +4,7 @@ import { Label } from '@config/label';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '@services/auth/auth.service';
 import { loginInterface } from '@config/interfaces/auth.interface';
+import { UtilsService } from '@utils/utils.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,8 @@ export class LoginComponent implements OnInit {
   loginForm!: FormGroup;
   constructor(
     private router: Router,
-    private authService: AuthService
+    private authService: AuthService,
+    private utils: UtilsService
   ) { }
 
   ngOnInit(): void {
@@ -31,20 +33,25 @@ export class LoginComponent implements OnInit {
       password: this.loginForm.get('password')?.value,
       username: this.loginForm.get('username')?.value
     };
-    this.authService.login(payload).subscribe(succes => {
-      console.log('succes', succes);
-    })
+    if(this.loginForm.invalid){
+      return this.utils.showError(this.label.message.failLogin1)
+    } else {
+      this.authService.login(payload).subscribe(succes => {
+
+      })
+    }
+  
   }
 
   initForm(): void {
     this.loginForm = new FormGroup({
       username: new FormControl(null, {
         updateOn: 'change',
-        validators: []
+        validators: [Validators.required]
       }),
       password: new FormControl(null, {
         updateOn: 'change',
-        validators: []
+        validators: [Validators.required]
       })
     })
   }
