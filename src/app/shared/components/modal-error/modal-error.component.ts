@@ -23,4 +23,6 @@ export class ModalErrorComponent implements OnInit {
   closeModal(): void {
     this.modalRef.hide();
   }
+
+  
 }

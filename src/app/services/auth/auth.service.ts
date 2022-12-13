@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { loginInterface } from '@config/interfaces/auth.interface';
+import { loginInterface, signUpInterface } from '@config/interfaces/auth.interface';
 import { CommonApiService } from '@services/common-api/common-api.service';
 import { Observable, of } from 'rxjs';
 @Injectable({
@@ -13,5 +13,9 @@ export class AuthService {
 
   login(payload: loginInterface): Observable<any> {
     return this.commonApi.post('auth/login', payload) as Observable<any>;
+  }
+
+  signUp(payload: signUpInterface): Observable<any> {
+    return this.commonApi.post('auth/sign-up', payload) as Observable<any>;
   }
 }

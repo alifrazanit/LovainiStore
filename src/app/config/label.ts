@@ -16,6 +16,10 @@ export const Label = {
       label: "Email",
       placeholder: "Email"
     },
+    phone: {
+      label: "Phone",
+      placeholder: "Phone"
+    },
   },
   loginPage:{
     signIn:"Sign In.",
@@ -25,12 +29,16 @@ export const Label = {
   },
   buttons:{
     signIn:"Sign In",
-    signUp:"Sign Up"
+    signUp:"Sign Up",
+    okay: "Okay"
   },
   message:{
-    failLogin1: "Incorrect username or password"
+    failLogin1: "Incorrect username or password",
+    errorServer: "An error occurred on the server",
+    pleasefillform:"please complete the form correctly"
   },
   labels: {
-    titleModal: 'System Info'
+    titleModal: 'System Info',
+    pleaseProvideValid: 'Please provide a valid'
   }
 }
