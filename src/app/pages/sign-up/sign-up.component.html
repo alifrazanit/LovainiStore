@@ -10,38 +10,63 @@
       <form [formGroup]="signUpForm">
         <div class="form-controls mb-3">
           <label class="form-label" >{{ label.forms.name.label }}</label>
-          <input type="text" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['name'].valid && signUpForm.controls['name'].touched }" formControlName="name">
-          <div class="invalid-feedback ">
+          <input type="text" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['name'].valid && signUpForm.controls['name'].touched }" formControlName="name" #name>
+          <div class="invalid-feedback" *ngIf="nameField?.errors?.['maxlength']">
+            {{ label.forms.name.label }} maxLength 80.
+          </div>
+          <div class="invalid-feedback" *ngIf="nameField?.errors?.['required']">
             {{ label.labels.pleaseProvideValid }} {{ label.forms.name.label }}.
           </div>
         </div>
         <div class="form-controls mb-3">
           <label>{{ label.forms.phone.label }}</label>
-          <input type="text" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['phone'].valid && signUpForm.controls['phone'].touched }" formControlName="phone">
-          <div class="invalid-feedback ">
+          <input type="text" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['phone'].valid && signUpForm.controls['phone'].touched }" formControlName="phone" #phone>
+          <div class="invalid-feedback" *ngIf="phoneField?.errors?.['phoneFormatValid']">
+            {{ label.forms.phone.validationMessage.validFormat }}.
+          </div>
+          <div class="invalid-feedback" *ngIf="phoneField?.errors?.['maxlength']">
+            {{ label.forms.phone.label }} maxLength 15.
+          </div>
+          <div class="invalid-feedback" *ngIf="phoneField?.errors?.['minlength']">
+            {{ label.forms.phone.label }} minLength 11.
+          </div>
+          <div class="invalid-feedback" *ngIf="phoneField?.errors?.['required']">
             {{ label.labels.pleaseProvideValid }} {{ label.forms.phone.label }}.
           </div>
         </div>
         <div class="form-controls mb-3">
           <label>{{ label.forms.email.label }}</label>
-          <input type="email" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['email'].valid && signUpForm.controls['email'].touched }" formControlName="email">
-          <div class="invalid-feedback ">
+          <input type="email" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['email'].valid && signUpForm.controls['email'].touched }" formControlName="email" #email>
+          <div class="invalid-feedback" *ngIf="emailField?.errors?.['required'] || emailField?.errors?.['email']">
             {{ label.labels.pleaseProvideValid }} {{ label.forms.email.label }}.
+          </div>
+          <div class="invalid-feedback" *ngIf="emailField?.errors?.['maxlength']">
+            {{ label.labels.pleaseProvideValid }} maxLength 120.
           </div>
         </div>
         <div class="form-controls mb-3">
           <label>{{ label.forms.username.label }}</label>
-          <input type="text" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['username'].valid && signUpForm.controls['username'].touched }" formControlName="username">
-          <div class="invalid-feedback ">
+          <input type="text" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['username'].valid && signUpForm.controls['username'].touched }" formControlName="username" #username>
+          <div class="invalid-feedback "  *ngIf="usernameField?.errors?.['required']">
             {{ label.labels.pleaseProvideValid }} {{ label.forms.username.label }}.
+          </div>
+          <div class="invalid-feedback "  *ngIf="usernameField?.errors?.['maxlength']">
+            {{ label.forms.username.label }} maxLength 50.
           </div>
         </div>
         <div class="form-controls mb-3">
           <label>{{ label.forms.password.label }}</label>
-          <input type="password" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['password'].valid && signUpForm.controls['password'].touched }" formControlName="password">
-          <div class="invalid-feedback ">
+          <input type="password" class="form-control" [ngClass]="{'is-invalid': !signUpForm.controls['password'].valid && signUpForm.controls['password'].touched }" formControlName="password" #password>
+          <div class="invalid-feedback " *ngIf="passwordField?.errors?.['required']">
             {{ label.labels.pleaseProvideValid }} {{ label.forms.password.label }}.
           </div>
+          <div class="invalid-feedback " *ngIf="passwordField?.errors?.['maxlength']">
+            {{ label.forms.password.label }}  maxLength 200.
+          </div>
+          <div class="invalid-feedback " *ngIf="passwordField?.errors?.['passwordValid']">
+            {{ label.forms.password.label }}  is to weak.
+          </div>
+          
         </div>
       </form>
       <div class="mt-2">

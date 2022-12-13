@@ -11,7 +11,8 @@
       "@pipes/*":["src/app/pipes/*"],
       "@services/*":["src/app/services/*"],
       "@shared/*":["src/app/shared/*"],
-      "@utils/*":["src/app/utils/*"]
+      "@utils/*":["src/app/utils/*"],
+      "@helpers/*":["src/app/helpers/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,

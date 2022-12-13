@@ -76,7 +76,7 @@ export class CommonApiService {
         .pipe(
           catchError(err => {
             this.utils.hideLoading();
-            throw 'error in source. Details: ' + err;
+            throw  err;
           })
         );
     } else {
@@ -108,7 +108,7 @@ export class CommonApiService {
       .pipe(
         catchError(err => {
           this.utils.hideLoading();
-          throw 'error in source. Details: ' + err;
+          throw  err;
         })
       );
     } else {

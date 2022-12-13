@@ -18,7 +18,10 @@ export const Label = {
     },
     phone: {
       label: "Phone",
-      placeholder: "Phone"
+      placeholder: "Phone",
+      validationMessage: {
+        validFormat:"phone  maxlength = 15 & minlength = 11, phone must start with 62 | +62 | 08"
+      }
     },
   },
   loginPage:{
