@@ -1,0 +1,16 @@
+.bg-header{
+    background-color: #1e90ff;
+    display: flex;
+    flex-flow: column;
+}
+.navbar-big{
+    height: 80px;
+}
+.navbar .navbar-brand,
+.navbar {
+    color: white;
+}
+
+.navbar .sub-header{
+
+}

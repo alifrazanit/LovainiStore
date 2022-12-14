@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OnlineStatusModule } from 'ngx-online-status';
@@ -15,7 +14,6 @@ import {
 import { ComponentsModule } from '@shared/components/components.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
 
-
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: "red",
   bgsPosition: POSITION.bottomCenter,
@@ -28,6 +26,7 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 @NgModule({
   declarations: [
     AppComponent,
+    
   ],
   imports: [
     ComponentsModule,

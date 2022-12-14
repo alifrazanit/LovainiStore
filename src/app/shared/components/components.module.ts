@@ -8,16 +8,21 @@ import { DashboardComponent } from '@pages/dashboard/dashboard.component';
 import { SignUpComponent } from '@pages/sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalErrorComponent } from './modal-error/modal-error.component';
+import { HeaderComponent } from '@layout/components/header/header.component';
 
 @NgModule({
+  exports:[
+    HeaderComponent
+  ],
   declarations: [
+    HeaderComponent,
     LoginComponent,
     LayoutComponent,
     NotFoundComponent,
     UnauthorizedComponent,
     DashboardComponent,
     SignUpComponent,
-    ModalErrorComponent
+    ModalErrorComponent,
   ],
   imports: [
     CommonModule,
