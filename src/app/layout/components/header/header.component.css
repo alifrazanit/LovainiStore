@@ -1,16 +1,37 @@
 .bg-header{
-    background-color: #1e90ff;
+    background-color: #f78fb3;
     display: flex;
     flex-flow: column;
 }
-.navbar-big{
-    height: 80px;
-}
-.navbar .navbar-brand,
-.navbar {
+.navbar *{
     color: white;
 }
+.navbar .navbar-brand {
+    color: white;
+}
+.navbar .top-menu-left {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.navbar  .top-menu-right{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.navbar .top-menu .separator{
+    color: white;
+}
+.navbar .top-menu p {
+    margin: 0;
+    padding: 0;
+}
 
-.navbar .sub-header{
+.navbar .navbar-brand{
+    font-size: 30px;
+}
 
+.navbar input{
+    color: black !important;
 }

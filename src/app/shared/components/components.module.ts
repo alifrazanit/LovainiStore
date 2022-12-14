@@ -9,13 +9,16 @@ import { SignUpComponent } from '@pages/sign-up/sign-up.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalErrorComponent } from './modal-error/modal-error.component';
 import { HeaderComponent } from '@layout/components/header/header.component';
+import { MiniHeaderTopComponent } from '@layout/components/header/mini-header-top/mini-header-top.component';
 
 @NgModule({
   exports:[
-    HeaderComponent
+    HeaderComponent,
+    MiniHeaderTopComponent
   ],
   declarations: [
     HeaderComponent,
+    MiniHeaderTopComponent,
     LoginComponent,
     LayoutComponent,
     NotFoundComponent,

@@ -1,0 +1,21 @@
+.top-menu{
+    display: flex;
+}
+.top-menu .top-menu-left {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+.top-menu .top-menu-right{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+.top-menu .separator{
+    color: white;
+}
+.top-menu p {
+    margin: 0;
+    padding: 0;
+}
