@@ -35,3 +35,11 @@
 .navbar input{
     color: black !important;
 }
+.navbar .full-width{
+    width: 100%;
+}
+
+.btn-find{
+    background: transparent !important;
+    border: none;
+}

@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LayoutRoutingModule } from '@layout/layout-routing.module';
+import { MainMenuComponent } from './components/main-menu/main-menu.component';
 
 
 @NgModule({
@@ -8,6 +9,9 @@ import { LayoutRoutingModule } from '@layout/layout-routing.module';
     CommonModule,
     LayoutRoutingModule
   ],
-  declarations: [ ]
+  declarations: [ 
+  
+    MainMenuComponent
+  ]
 })
 export class LayoutModule { }

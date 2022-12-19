@@ -10,15 +10,18 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ModalErrorComponent } from './modal-error/modal-error.component';
 import { HeaderComponent } from '@layout/components/header/header.component';
 import { MiniHeaderTopComponent } from '@layout/components/header/mini-header-top/mini-header-top.component';
+import { BannerComponent } from '@layout/components/banner/banner.component';
 
 @NgModule({
   exports:[
     HeaderComponent,
-    MiniHeaderTopComponent
+    MiniHeaderTopComponent,
+    BannerComponent,
   ],
   declarations: [
     HeaderComponent,
     MiniHeaderTopComponent,
+    BannerComponent,
     LoginComponent,
     LayoutComponent,
     NotFoundComponent,
