@@ -11,8 +11,11 @@ import {
   POSITION,
   PB_DIRECTION
 } from "ngx-ui-loader";
-import { ComponentsModule } from '@shared/components/components.module';
 import { ModalModule } from 'ngx-bootstrap/modal';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from '@shared/shared.module';
+
+
 
 const ngxUiLoaderConfig: NgxUiLoaderConfig = {
   bgsColor: "red",
@@ -25,18 +28,19 @@ const ngxUiLoaderConfig: NgxUiLoaderConfig = {
 };
 @NgModule({
   declarations: [
-    AppComponent,
-    
+    AppComponent
   ],
   imports: [
-    ComponentsModule,
+    SharedModule,
     BrowserModule,
     AppRoutingModule,
     OnlineStatusModule,
     HttpClientModule,
     NgxUiLoaderModule.forRoot(ngxUiLoaderConfig),
-    ModalModule.forRoot()
+    ModalModule.forRoot(),
+    BrowserAnimationsModule
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

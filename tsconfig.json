@@ -13,6 +13,7 @@
       "@shared/*":["src/app/shared/*"],
       "@utils/*":["src/app/utils/*"],
       "@helpers/*":["src/app/helpers/*"],
+      "@directives/*":["src/app/directives/*"],
     },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
