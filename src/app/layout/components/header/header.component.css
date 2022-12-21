@@ -43,4 +43,10 @@
     background: transparent !important;
     border: none;
 }
+.navbar .menu-link a:hover{
+    cursor: pointer;
+}
 
+.navbar .menu-jumbo{
+    color: black;
+}

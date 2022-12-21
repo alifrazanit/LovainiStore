@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './mini-header-top.component.html',
   styleUrls: ['./mini-header-top.component.css'],
   animations: [
-    trigger('menuLayer', [
+    trigger('QRCode', [
       state('closed', style({
         display: 'none',
         position: 'fixed',
@@ -23,8 +23,6 @@ import { Component, OnInit } from '@angular/core';
         justifyContent: 'center',
         alignItems: 'center'
       })),
-      transition('closed => open', animate(200)),
-      transition('open => closed', animate(200))
     ])
   ]
 })

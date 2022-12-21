@@ -1,8 +1,9 @@
 <div class="container-fluid top-menu">
     <div class="top-menu-left">
-        <div class="menu-download" (mouseenter)="menuEnter($event)" (mouseleave)="menuLeave($event)">
+        <div class="menu-download" 
+        (mouseenter)="menuEnter($event)" (mouseleave)="menuLeave($event)">
             <p >Download Lovaini App</p>
-            <div [@menuLayer]="state">
+            <div [@QRCode]="state">
                 <img src="../../../../../assets/images/demo-qrcode.png" class="qrcode" alt="qrcode"/>
             </div>
         </div>
