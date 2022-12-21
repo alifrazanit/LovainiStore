@@ -23,7 +23,11 @@
 .top-menu .menu-download p:hover{
     cursor: pointer;
 }
-
+.top-menu .menu-download .qrcode{
+    object-fit: cover;
+    width: 11rem;
+    height: auto;
+}
 
 
 

@@ -2,8 +2,10 @@
     <div class="top-menu-left">
         <div class="menu-download" (mouseenter)="menuEnter($event)" (mouseleave)="menuLeave($event)">
             <p >Download Lovaini App</p>
+            <div [@menuLayer]="state">
+                <img src="../../../../../assets/images/demo-qrcode.png" class="qrcode" alt="qrcode"/>
+            </div>
         </div>
-        <div [@menuLayer]="state"></div>
     </div>
     <div class="top-menu-right">
         <p>Tentang Lovaini</p>

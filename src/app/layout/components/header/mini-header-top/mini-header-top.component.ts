@@ -5,23 +5,26 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-mini-header-top',
   templateUrl: './mini-header-top.component.html',
   styleUrls: ['./mini-header-top.component.css'],
-  animations:[
+  animations: [
     trigger('menuLayer', [
-      state('closed', style({ 
-        display:'block'
+      state('closed', style({
+        display: 'none',
+        position: 'fixed',
       })),
       state('open', style({
-        position: 'absolute',
-        top: '100%',
+        position: 'fixed',
+        top: '35px',
+        left: '10px',
         zIndex: '5',
-        background: 'red',
-        width: '100%',
-        height: '100%',
-        left: '0',
-        display:'block'
+        background: 'white',
+        borderRadius: '15px',
+        boxShadow: 'rgb(0 0 0 / 24%) 0px 3px 8px',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center'
       })),
-      transition('closed => open', animate(300)),
-      transition('open => closed', animate(800))
+      transition('closed => open', animate(200)),
+      transition('open => closed', animate(200))
     ])
   ]
 })
@@ -29,15 +32,14 @@ export class MiniHeaderTopComponent implements OnInit {
   state = 'closed';
   constructor() { }
 
-   
+
   ngOnInit(): void {
   }
 
-  menuEnter(e: any){
+  menuEnter(e: any) {
     this.state = "open";
   }
-
-  menuLeave(e: any){
+  menuLeave(e: any) {
     this.state = "closed";
   }
 }
