@@ -1,7 +1,9 @@
 <div class="container-fluid top-menu">
     <div class="top-menu-left">
-        <p>Download Lovaini App</p>
-        <div class="menu-download" style="width: 20px; height: 20px;background-color: red;"  appHoverJumboMenu></div>
+        <div class="menu-download" (mouseenter)="menuEnter($event)" (mouseleave)="menuLeave($event)">
+            <p >Download Lovaini App</p>
+        </div>
+        <div [@menuLayer]="state"></div>
     </div>
     <div class="top-menu-right">
         <p>Tentang Lovaini</p>

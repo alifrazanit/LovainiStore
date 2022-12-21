@@ -1,14 +1,14 @@
 import { trigger, state, style, animate, transition } from '@angular/animations';
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-mini-header-top',
   templateUrl: './mini-header-top.component.html',
   styleUrls: ['./mini-header-top.component.css'],
   animations:[
-    trigger('btnDownloadApp', [
+    trigger('menuLayer', [
       state('closed', style({ 
-        display:'none'
+        display:'block'
       })),
       state('open', style({
         position: 'absolute',
@@ -27,11 +27,17 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class MiniHeaderTopComponent implements OnInit {
   state = 'closed';
-  // @HostListener('mouseenter', ['$event'])
-  
   constructor() { }
 
+   
   ngOnInit(): void {
   }
 
+  menuEnter(e: any){
+    this.state = "open";
+  }
+
+  menuLeave(e: any){
+    this.state = "closed";
+  }
 }
