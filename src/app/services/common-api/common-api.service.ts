@@ -14,7 +14,7 @@ interface reqOptsInterface {
   observe?: 'body';
   params?: HttpParams;
   reportProgress?: boolean;
-  responseType?: 'json';
+  responseType?: any;
   withCredentials?: boolean;
 }
 @Injectable({
@@ -61,6 +61,11 @@ export class CommonApiService {
           responseType: 'json',
           headers: undefined,
         };
+      } else {
+        reqOpts = {
+          ...reqOpts,
+          withCredentials: true,
+        }
       }
       if (this.utils.getToken()) {
         reqOpts.headers = this.getHeaders();

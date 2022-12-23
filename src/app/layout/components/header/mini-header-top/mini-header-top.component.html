@@ -4,12 +4,12 @@
         (mouseenter)="menuEnter($event)" (mouseleave)="menuLeave($event)">
             <p >Download Lovaini App</p>
             <div [@QRCode]="state">
-                <img src="../../../../../assets/images/demo-qrcode.png" class="qrcode" alt="qrcode"/>
+                <img src="http://192.168.43.88:3000/demo-qrcode.png" class="qrcode" alt="qrcode"/>
             </div>
         </div>
     </div>
     <div class="top-menu-right">
-        <p>Tentang Lovaini</p>
+        <p [routerLink]="['/user/bob']">Tentang Lovaini</p>
         <span class="separator">|</span>
         <p>Bantuan</p>
         <span class="separator">|</span>

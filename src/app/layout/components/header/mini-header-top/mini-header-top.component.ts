@@ -1,5 +1,6 @@
 import { trigger, state, style, animate, transition } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { MiniHeaderTopService } from '@services/layouts/mini-header-top/mini-header-top.service';
 
 @Component({
   selector: 'app-mini-header-top',
@@ -28,10 +29,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MiniHeaderTopComponent implements OnInit {
   state = 'closed';
-  constructor() { }
+  barcodeImage: any;
+  constructor(
+    private miniHeaderService: MiniHeaderTopService
+  ) { }
 
 
   ngOnInit(): void {
+    // this.getBarcode();
   }
 
   menuEnter(e: any) {
@@ -39,5 +44,12 @@ export class MiniHeaderTopComponent implements OnInit {
   }
   menuLeave(e: any) {
     this.state = "closed";
+  }
+
+  getBarcode(){
+    this.miniHeaderService.getBarcode().subscribe(img => {
+      console.log(img)
+      this.barcodeImage = img;
+    })
   }
 }

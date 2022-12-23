@@ -2,9 +2,11 @@
     <div class="col-2 col-sm-2 col-xs-2">
         <div class="row menu-left">
             <div class="col">
-                <ul class="list-group" *ngFor="let menu of DUMMYMENU">
-                    <li class="list-group-item" [ngClass]="{'active': menu.selected } " (click)="selectMenu(menu)">{{ menu.menu }}</li>
-                </ul>
+                <ng-container *ngIf="dataMenu.length !== 0">
+                    <ul class="list-group" *ngFor="let menu of dataMenu">
+                        <li class="list-group-item" [ngClass]="{'active': menu.selected } " (click)="selectMenu(menu)">{{ menu.menu }}</li>
+                    </ul>
+                </ng-container>
             </div>
         </div>
     </div>

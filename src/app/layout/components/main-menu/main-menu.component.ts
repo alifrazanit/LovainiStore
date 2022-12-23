@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { MainMenuService } from '@services/layouts/main-menu/main-menu.service';
 
 @Component({
   selector: 'app-main-menu',
@@ -6,21 +8,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-menu.component.css']
 })
 export class MainMenuComponent implements OnInit {
+  dataMenu: any[] = [];
 
-  constructor() { }
-  DUMMYMENU = [
-    { menu: 'Rumah Tangga', selected: false },
-    { menu: 'Buku', selected: false },
-    { menu: 'Elektronik', selected: false },
-  ]
+  constructor(
+    private mainMenuService: MainMenuService
+  ) { }
+
   ngOnInit(): void {
-    this.DUMMYMENU.map(dm => ({manu: dm, isSelected: false }));
+    this.dataMenu.map(dm => ({manu: dm, selected: false }));
+    this.getMenu();
+  }
+
+  getMenu(){
+    this.mainMenuService.getDummyMen().subscribe(data => {
+      console.log(data)
+      this.dataMenu = data;
+    })
   }
 
 
 
   selectMenu(menu: any){
-    let old = this.DUMMYMENU.find((dm:any) => dm.selected === true);
+    let old = this.dataMenu.find((dm:any) => dm.selected === true);
     if(old){
       old.selected = false;
     }
