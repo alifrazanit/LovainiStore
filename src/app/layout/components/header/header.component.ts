@@ -38,7 +38,7 @@ export class HeaderComponent implements OnInit {
     this.state = "open";
   }
   menuLeave(e: any) {
-    this.state = "closed";
+    // this.state = "closed";
   }
 
 }

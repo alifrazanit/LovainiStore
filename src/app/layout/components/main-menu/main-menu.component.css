@@ -1,0 +1,36 @@
+.menu {
+    width: 100%;
+    height: 250px !important;
+}
+
+.menu .menu-left {
+    width: 100%;
+    height: 250px !important;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.menu-left {
+    background-color: white;
+}
+
+.menu-right {
+    background-color: blue;
+}
+
+.menu-left ul li{
+    font-weight: bold;
+    color: rgb(49, 53, 59, 0.96);
+    border:none !important;
+    background-color: transparent;
+}
+.menu-left ul li:hover{
+    cursor: pointer;
+    background-color: rgb(243, 243, 243);
+    border-radius: 5px;
+}
+
+.menu-left ul li.active{
+    background-color: rgb(243, 243, 243);
+}
+

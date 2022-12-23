@@ -1,0 +1,48 @@
+{
+    "data":[
+        { 
+            "id":1,
+            "parentMenu":"Rumah Tangga",
+            "segment":"rumah-tangga",
+            "icon":"",
+            "menusOptions":[
+                { 
+                    "headerMenu":"Dekorasi",
+                    "segment":"dekoresi",
+                    "childMenu":[
+                        { 
+                            "menu":"Jam Dinding",
+                            "segment":"jam-dinding"
+                        },
+                        { 
+                            "menu":"Jam Meja",
+                            "segment":"jam-meja"
+                        }
+                    ]
+                }
+            ]
+        },
+        { 
+            "id":2,
+            "parentMenu":"Buku",
+            "segment":"buku",
+            "icon":"",
+            "menusOptions":[
+                { 
+                    "headerMenu":"Arsitektur & Desain",
+                    "segment":"arsitektur-desain",
+                    "childMenu":[
+                        { 
+                            "menu":"Buku Bangunan",
+                            "segment":"buku-bangunan"
+                        },
+                        { 
+                            "menu":"Buku Desain",
+                            "segment":"buku-desain"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

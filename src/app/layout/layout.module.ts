@@ -7,12 +7,14 @@ import { MiniHeaderTopComponent } from '@layout/components/header/mini-header-to
 import { BannerComponent } from '@layout/components/banner/banner.component';
 import { HeaderComponent } from '@layout/components/header/header.component';
 import { LayoutComponent } from '@layout/layout.component';
+import { SelectMenuDirective } from '@directives/select-menu/select-menu.directive';
 
 
 @NgModule({
   declarations: [ 
     MainMenuComponent,
     HoverJumboMenuDirective,
+    SelectMenuDirective,
     MiniHeaderTopComponent,
     BannerComponent,
     HeaderComponent,
@@ -26,7 +28,8 @@ import { LayoutComponent } from '@layout/layout.component';
     HoverJumboMenuDirective,
     MiniHeaderTopComponent,
     BannerComponent,
-    HeaderComponent
+    HeaderComponent,
+    SelectMenuDirective
   ],
 })
 export class LayoutModule { }
